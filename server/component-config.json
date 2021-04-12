@@ -1,0 +1,17 @@
+{
+  "loopback-component-explorer": {
+    "mountPath": "/explorer",
+    "generateOperationScopedModels": true
+  },
+  "loopback-component-log": {
+    "enabled": true,
+    "name": "logger",
+    "http": true,
+    "level": "error",
+    "useStdOut": true,
+    "useLogFile": false,
+    "path": "./logs",
+    "maxResponseTime": 30000,
+    "excludes": ["req","res"]
+  }
+}

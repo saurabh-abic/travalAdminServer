@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/node_modules
+/target
+/files
+/products
+/upload
+/.idea
+/travalAdminServer/common/modules/loopback-graphql/src
+/travalAdminServer/server/boot/01-generateschema

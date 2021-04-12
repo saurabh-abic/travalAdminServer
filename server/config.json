@@ -1,0 +1,44 @@
+{
+  "restApiRoot": "/api",
+  "host": "0.0.0.0",
+  "clientURL": "http://localhost:3000",
+  "apiURL": "http://localhost:8443",
+  "port": 8443,
+  "environment": "stage",
+  "adminEmailId": "",
+  "STORAGE_ROOT": "./",
+  "S3PATH": "https://lroiphotos.s3.ap-south-1.amazonaws.com/",
+  "modelExclusion": [ "*_audit" ],
+  "RAZOR_PAY_KEY_ID": "",
+  "RAZOR_PAY_KEY_SECRET": "",
+  "SMS_FROM": "",
+  "ACCOUNT_SID": "",
+  "AUTH_TOKEN": "",
+  "otpconfig": {
+    "url": "",
+    "userName": "",
+    "password": "",
+    "type": 0,
+    "dlr": 1,
+    "source": ""
+  },
+  "remoting": {
+    "context": false,
+    "rest": {
+      "handleErrors": false,
+      "normalizeHttpPath": false,
+      "xml": false
+    },
+    "json": {
+      "strict": false,
+      "limit": "100kb"
+    },
+    "urlencoded": {
+      "extended": true,
+      "limit": "100kb"
+    },
+    "cors": false
+  },
+  "productionMode": false,
+  "enableAuth": true
+}

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\common",
+    "\\common\\modules",
+    "\\common\\modules\\loopback-graphql",
+    "\\common\\modules\\loopback-graphql\\dist",
+    "\\server",
+    "\\server\\boot"
+  ],
+  "PreviewInSolutionExplorer": false
+}

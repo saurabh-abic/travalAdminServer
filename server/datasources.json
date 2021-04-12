@@ -1,0 +1,31 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "travel": {
+    "host": "localhost",
+    "port": "3306",
+    "database": "travel",
+    "name": "travel",
+    "password": "root",
+    "user": "root",
+    "connector": "mysql"
+  },
+  "localstorage": {
+    "name": "localstorage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./",
+    "maxFileSize": "1073741824"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "region": "eu-central-1",
+    "keyId": "",
+    "key": "",
+    "maxFileSize": "1073741824"
+  }
+}
