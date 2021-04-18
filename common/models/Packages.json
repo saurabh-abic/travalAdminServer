@@ -1,0 +1,119 @@
+{
+  "name": "Packages",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "travel",
+      "table": "Packages"
+    },
+    "relations": {}
+  },
+  "properties": {
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "description",
+        "dataType": "text",
+        "dataLength": 65535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "exclusions": {
+      "type": "String",
+      "required": false,
+      "length": 1000,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "exclusions",
+        "dataType": "varchar",
+        "dataLength": 1000,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "id": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "id": 1,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    },
+    "imageids": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "imageIds",
+        "dataType": "varchar",
+        "dataLength": 100,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "inclusions": {
+      "type": "String",
+      "required": false,
+      "length": 1000,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "inclusions",
+        "dataType": "varchar",
+        "dataLength": 1000,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "name": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "thingtopack": {
+      "type": "String",
+      "required": false,
+      "length": 1000,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "thingToPack",
+        "dataType": "varchar",
+        "dataLength": 1000,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    }
+  }
+}

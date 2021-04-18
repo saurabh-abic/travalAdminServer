@@ -55,5 +55,21 @@
   "Category": {
     "dataSource": "travel",
     "public": true
+  },
+  "Batches": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Employee": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Itinerary": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Packages": {
+    "dataSource": "travel",
+    "public": true
   }
 }

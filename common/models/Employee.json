@@ -1,10 +1,10 @@
 {
-  "name": "User",
+  "name": "Employee",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "travel",
-      "table": "User"
+      "table": "Employee"
     },
     "relations": {}
   },
@@ -61,11 +61,26 @@
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "Email",
+        "columnName": "email",
         "dataType": "varchar",
         "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "emailverified": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "emailVerified",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
         "nullable": "Y"
       }
     },
@@ -133,13 +148,13 @@
     "password": {
       "type": "String",
       "required": false,
-      "length": 30,
+      "length": 100,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "password",
         "dataType": "varchar",
-        "dataLength": 30,
+        "dataLength": 100,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -160,6 +175,21 @@
         "nullable": "Y"
       }
     },
+    "realm": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "realm",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
     "state": {
       "type": "String",
       "required": false,
@@ -170,6 +200,36 @@
         "columnName": "state",
         "dataType": "varchar",
         "dataLength": 30,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "username": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "username",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "verificationtoken": {
+      "type": "String",
+      "required": false,
+      "length": 100,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "verificationToken",
+        "dataType": "varchar",
+        "dataLength": 100,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
