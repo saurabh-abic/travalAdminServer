@@ -63,7 +63,15 @@ module.exports = function(server) {
                     next();
                  });
             }
-        }else {
+        }
+        else if(type === "login"){
+            let val = {...ctx.result.__data};
+            server.models.Employee.findById(val.userId, (err, res)=>{
+               let newRes = {...ctx.result.__data, name: res.firstname + " " + res.lastname};
+               ctx.res.send(newRes);
+            });
+        }
+        else {
             next();
         }
 
