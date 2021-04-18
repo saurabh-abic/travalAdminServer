@@ -36,19 +36,7 @@
     "dataSource": "travel",
     "public": true
   },
-  "Role": {
-    "dataSource": "travel",
-    "public": true
-  },
   "Subcategory": {
-    "dataSource": "travel",
-    "public": true
-  },
-  "User": {
-    "dataSource": "travel",
-    "public": true
-  },
-  "Rolemapping": {
     "dataSource": "travel",
     "public": true
   },
@@ -56,11 +44,11 @@
     "dataSource": "travel",
     "public": true
   },
-  "Batches": {
+  "Rolemapping": {
     "dataSource": "travel",
     "public": true
   },
-  "Employee": {
+  "Batches": {
     "dataSource": "travel",
     "public": true
   },
@@ -69,6 +57,14 @@
     "public": true
   },
   "Packages": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Employee": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Role": {
     "dataSource": "travel",
     "public": true
   }

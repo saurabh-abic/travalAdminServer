@@ -3,6 +3,45 @@ const startGraphql = require('../../common/modules/loopback-graphql/dist');
 module.exports = function(server) {
     startGraphql(server, {});
     var remotes = server.remotes();
+
+
+    remotes.before('**', function(ctx, next){
+        let accesstoken = ctx.req.headers.accesstoken;
+
+        let [name, type] =  ctx.methodString.split(".");
+        if(type === "login"){
+            next();
+        }else{
+            server.models.AccessToken.findById(accesstoken, function (err, token) {
+                if(!token) {
+                    ctx.res.status(401);
+                    ctx.res.send({
+                        'Error': 'Unauthorized',
+                        'Message': 'You need to be authenticated to access this endpoint'
+                    });
+                }
+                token.validate(function (err, isValid) {
+                    if (err) {
+                        ctx.res.status(401);
+                        ctx.res.send({
+                            'Error': 'Unauthorized',
+                            'Message': 'You need to be authenticated to access this endpoint'
+                        });
+                    } else if (isValid) {
+                        next();
+                    } else {
+                        ctx.res.status(401);
+                        ctx.res.send({
+                            'Error': 'Unauthorized',
+                            'Message': 'You need to be authenticated to access this endpoint'
+                        });
+                    }
+                });
+            });
+        }
+    });
+    
+
     // modify all returned values
     remotes.after('**', function (ctx, next) {
         let filter;

@@ -116,7 +116,6 @@ function isActionAllowed(args, model, isList, related) {
         let modelMapObj = tablePermissionMap[model.pluralModelName.toLowerCase()];
         if (!modelMapObj)
             modelMapObj = tablePermissionMap[model.modelName.toLowerCase()];
-    console.log("model--->", modelMapObj);
         let currentUser = getCurrentUser();
 
         if (!modelMapObj || !currentUser || !currentUser.role) {
@@ -129,7 +128,6 @@ function isActionAllowed(args, model, isList, related) {
         }
 
         let role = currentUser.role.toLowerCase && currentUser.role.toLowerCase() || currentUser.role;
-        console.log("role--->", role);
 
         let conditionsObj;
         let action = '';

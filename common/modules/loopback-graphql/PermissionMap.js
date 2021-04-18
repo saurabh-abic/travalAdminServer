@@ -344,59 +344,7 @@ const tablePermissionMap = {
 			1: [],
 			admin: []
 		}
-	},
-    categories:{
-        list: {
-            0: [],
-            1: [],
-            admin: [],
-            physician: [],
-            assistant: [],
-            salesrep: [],
-            public:[]
-        },
-        add: {
-            0: [],
-            1: [],
-            admin: []
-        },
-        edit: {
-            0: [],
-            1: [],
-            admin: []
-        },
-        delete: {
-            0: [],
-            1: [],
-            admin: []
-        }
-	},
-    category:{
-        list: {
-            0: [],
-            1: [],
-            admin: [],
-            physician: [],
-            assistant: [],
-            salesrep: [],
-            public:[]
-        },
-        add: {
-            0: [],
-            1: [],
-            admin: []
-        },
-        edit: {
-            0: [],
-            1: [],
-            admin: []
-        },
-        delete: {
-            0: [],
-            1: [],
-            admin: []
-        }
-    }
+	}
 };
 
 module.exports = {
