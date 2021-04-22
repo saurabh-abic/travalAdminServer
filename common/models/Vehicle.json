@@ -1,29 +1,14 @@
 {
-  "name": "Category",
+  "name": "Vehicle",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "travel",
-      "table": "Category"
+      "table": "Vehicle"
     },
     "relations": {}
   },
   "properties": {
-    "description": {
-      "type": "String",
-      "required": false,
-      "length": 1000,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "description",
-        "dataType": "varchar",
-        "dataLength": 1000,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
     "id": {
       "type": "Number",
       "required": false,

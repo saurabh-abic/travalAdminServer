@@ -1,29 +1,14 @@
 {
-  "name": "Category",
+  "name": "Occupancy",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "travel",
-      "table": "Category"
+      "table": "Occupancy"
     },
     "relations": {}
   },
   "properties": {
-    "description": {
-      "type": "String",
-      "required": false,
-      "length": 1000,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "description",
-        "dataType": "varchar",
-        "dataLength": 1000,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      }
-    },
     "id": {
       "type": "Number",
       "required": false,
@@ -43,13 +28,13 @@
     "name": {
       "type": "String",
       "required": false,
-      "length": 100,
+      "length": 45,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "name",
         "dataType": "varchar",
-        "dataLength": 100,
+        "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"

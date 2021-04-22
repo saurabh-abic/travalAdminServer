@@ -1,39 +1,24 @@
 {
-  "name": "Subcategory",
+  "name": "Media",
   "options": {
     "idInjection": false,
     "mysql": {
       "schema": "travel",
-      "table": "Subcategory"
+      "table": "Media"
     },
     "relations": {}
   },
   "properties": {
-    "categoryid": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "categoryId",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "Y"
-      }
-    },
-    "description": {
+    "content": {
       "type": "String",
       "required": false,
-      "length": 65535,
+      "length": null,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "description",
-        "dataType": "text",
-        "dataLength": 65535,
+        "columnName": "content",
+        "dataType": "json",
+        "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -55,31 +40,76 @@
         "nullable": "N"
       }
     },
-    "name": {
+    "mediatype": {
       "type": "String",
       "required": false,
-      "length": 100,
+      "length": 5,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "name",
-        "dataType": "varchar",
-        "dataLength": 100,
+        "columnName": "mediaType",
+        "dataType": "enum",
+        "dataLength": 5,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       }
     },
-    "state": {
+    "parentid": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "parentId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
+    "parenttype": {
       "type": "String",
       "required": false,
       "length": 45,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "state",
+        "columnName": "parentType",
         "dataType": "varchar",
         "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "path": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "path",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      }
+    },
+    "viewtype": {
+      "type": "String",
+      "required": false,
+      "length": 9,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "viewType",
+        "dataType": "enum",
+        "dataLength": 9,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"

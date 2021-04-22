@@ -44,7 +44,7 @@
     "dataSource": "travel",
     "public": true
   },
-  "Rolemapping": {
+  "Employee": {
     "dataSource": "travel",
     "public": true
   },
@@ -56,15 +56,31 @@
     "dataSource": "travel",
     "public": true
   },
+  "Media": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Occupancy": {
+    "dataSource": "travel",
+    "public": true
+  },
   "Packages": {
     "dataSource": "travel",
     "public": true
   },
-  "Employee": {
+  "Price": {
     "dataSource": "travel",
     "public": true
   },
   "Role": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Rolemapping": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Vehicle": {
     "dataSource": "travel",
     "public": true
   }
