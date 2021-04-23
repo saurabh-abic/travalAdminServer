@@ -6,16 +6,13 @@ module.exports = function(server) {
 
 
     remotes.before('**', function(ctx, next){
-        let accesstoken = ctx.req.query.access_token;
+        let accesstoken = ctx.req.headers.accesstoken;
 
-        console.log("accesstoken--->", accesstoken);
-        console.log("ctx.methodString--->", ctx.req);
         let [name, type] =  ctx.methodString.split(".");
         if(type === "login"){
             next();
         }else{
             server.models.AccessToken.findById(accesstoken, function (err, token) {
-
                 if(!token) {
                     ctx.res.status(401);
                     ctx.res.send({
@@ -66,7 +63,15 @@ module.exports = function(server) {
                     next();
                  });
             }
-        }else {
+        }
+        else if(type === "login"){
+            let val = {...ctx.result.__data};
+            server.models.Employee.findById(val.userId, (err, res)=>{
+               let newRes = {...ctx.result.__data, name: res.firstname + " " + res.lastname};
+               ctx.res.send(newRes);
+            });
+        }
+        else {
             next();
         }
 
