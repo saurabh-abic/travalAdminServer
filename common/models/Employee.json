@@ -7,7 +7,16 @@
       "schema": "travel",
       "table": "Employee"
     },
-    "relations": {}
+    "relations": {
+      "permissions": {
+        "type": "hasMany",
+        "model": "Permissions",
+        "foreignKey": "userId",
+        "options": {
+          "disableInclude": true
+        }
+      }
+    }
   },
   "properties": {
     "address": {

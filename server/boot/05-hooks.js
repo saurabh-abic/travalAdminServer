@@ -6,7 +6,7 @@ module.exports = function(server) {
 
 
     remotes.before('**', function(ctx, next){
-        let accesstoken = ctx.req.headers.accesstoken;
+        let accesstoken = ctx.req.headers.accesstoken ||  ctx.req.query.access_token;
 
         let [name, type] =  ctx.methodString.split(".");
         if(type === "login"){
@@ -68,7 +68,11 @@ module.exports = function(server) {
             let val = {...ctx.result.__data};
             server.models.Employee.findById(val.userId, (err, res)=>{
                let newRes = {...ctx.result.__data, name: res.firstname + " " + res.lastname};
-               ctx.res.send(newRes);
+                   newRes["isAdmin"] = !!res.isadmin;
+                server.models.Permissions.findOne({where:{userId: res.id}}, (e, val)=>{
+                    newRes["permissions"] = val && val.permissions && JSON.parse(val.permissions);
+                    ctx.res.send(newRes);
+                });
             });
         }
         else {

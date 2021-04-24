@@ -83,5 +83,9 @@
   "Vehicle": {
     "dataSource": "travel",
     "public": true
+  },
+  "Permissions": {
+    "dataSource": "travel",
+    "public": true
   }
 }
