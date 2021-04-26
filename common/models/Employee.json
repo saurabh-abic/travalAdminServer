@@ -125,6 +125,21 @@
         "nullable": "N"
       }
     },
+    "inactive": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "inactive",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "Y"
+      }
+    },
     "isadmin": {
       "type": "Number",
       "required": false,

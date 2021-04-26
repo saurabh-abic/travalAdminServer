@@ -72,13 +72,13 @@
     "faq": {
       "type": "String",
       "required": false,
-      "length": null,
+      "length": 65535,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "faq",
-        "dataType": "json",
-        "dataLength": null,
+        "dataType": "text",
+        "dataLength": 65535,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"

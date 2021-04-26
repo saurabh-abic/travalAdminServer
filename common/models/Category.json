@@ -6,7 +6,13 @@
       "schema": "travel",
       "table": "Category"
     },
-    "relations": {}
+    "relations": {
+      "subcategories": {
+        "type": "hasMany",
+        "model": "Subcategory",
+        "foreignKey": "categoryId"
+      }
+    }
   },
   "properties": {
     "description": {
