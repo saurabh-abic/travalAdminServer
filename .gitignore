@@ -8,5 +8,5 @@
 /products
 /upload
 /.idea
-/travalAdminServer/common/modules/loopback-graphql/src/
-/travalAdminServer/server/boot/01-generateschema
+/common/modules/loopback-graphql/src/
+/server/boot/01-generateschema
