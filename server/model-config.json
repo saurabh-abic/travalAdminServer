@@ -87,5 +87,13 @@
   "Permissions": {
     "dataSource": "travel",
     "public": true
+  },
+  "Orders": {
+    "dataSource": "travel",
+    "public": true
+  },
+  "Passengers": {
+    "dataSource": "travel",
+    "public": true
   }
 }

@@ -9,36 +9,37 @@ module.exports = function(server) {
         let accesstoken = ctx.req.headers.accesstoken ||  ctx.req.query.access_token;
 
         let [name, type] =  ctx.methodString.split(".");
-        if(type === "login"){
-            next();
-        }else{
-            server.models.AccessToken.findById(accesstoken, function (err, token) {
-                if(!token) {
-                    ctx.res.status(401);
-                    ctx.res.send({
-                        'Error': 'Unauthorized',
-                        'Message': 'You need to be authenticated to access this endpoint'
-                    });
-                }
-                token.validate(function (err, isValid) {
-                    if (err) {
-                        ctx.res.status(401);
-                        ctx.res.send({
-                            'Error': 'Unauthorized',
-                            'Message': 'You need to be authenticated to access this endpoint'
-                        });
-                    } else if (isValid) {
-                        next();
-                    } else {
-                        ctx.res.status(401);
-                        ctx.res.send({
-                            'Error': 'Unauthorized',
-                            'Message': 'You need to be authenticated to access this endpoint'
-                        });
-                    }
-                });
-            });
-        }
+        next();
+        // if(type === "login"){
+        //     next();
+        // }else{
+        //     server.models.AccessToken.findById(accesstoken, function (err, token) {
+        //         if(!token) {
+        //             ctx.res.status(401);
+        //             ctx.res.send({
+        //                 'Error': 'Unauthorized',
+        //                 'Message': 'You need to be authenticated to access this endpoint'
+        //             });
+        //         }
+        //         token.validate(function (err, isValid) {
+        //             if (err) {
+        //                 ctx.res.status(401);
+        //                 ctx.res.send({
+        //                     'Error': 'Unauthorized',
+        //                     'Message': 'You need to be authenticated to access this endpoint'
+        //                 });
+        //             } else if (isValid) {
+        //                 next();
+        //             } else {
+        //                 ctx.res.status(401);
+        //                 ctx.res.send({
+        //                     'Error': 'Unauthorized',
+        //                     'Message': 'You need to be authenticated to access this endpoint'
+        //                 });
+        //             }
+        //         });
+        //     });
+        // }
     });
     
 
