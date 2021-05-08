@@ -1,6 +1,13 @@
 'use strict';
 const path = require('path');
 
+// --------------------------------------------------------
+const bodyParser = require('body-parser')
+const cors = require('cors');
+var crypto = require('crypto');
+
+// --------------------------------------------------------
+
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 var { initRedis } = require('../common/helper/RedisHelper')
@@ -36,6 +43,54 @@ process.on('unhandledRejection', function (reason, p) {
     //call handler here
     console.log(new Date(), "##########unhandledRejection", reason, p);
 })
+
+app.use(bodyParser.json())
+app.use(cors())
+app.get('/checkout', function(req, res){
+    console.log("Get Checkout hit");
+
+})
+
+app.post('/checkout',async (req, res)=>{
+    console.log("POST Checkout hit");
+console.log(req.body)
+
+var key = "OYL5tj9T";
+var salt = "XXCo8YibBv";
+var txnid = "4TYD21M7";
+var amount = 10;
+var productinfo = req.body.productinfo;
+var firstname = req.body.firstname;
+var email = req.body.email;
+
+
+const udf1="", udf2="",udf3="", udf4="", udf5="", udf6="",udf7="", udf8="",udf9="", udf10 = '';
+
+var text = key+'|'+txnid+'|'+amount+'|'+productinfo+'|'+firstname+'|'+email+'|||||'+udf5+'||||||'+salt;
+
+var cryp = crypto.createHash('sha512');
+cryp.update(text);
+var hash = cryp.digest('hex');
+
+console.log(hash);
+
+res.json({
+    hash: hash,
+    key: "OYL5tj9T",
+    salt: "XXCo8YibBv",
+    txnid: "4TYD21M7",
+    amount: 10,
+    productinfo: req.body.productinfo,
+    firstname: req.body.firstname,
+    email: req.body.email,
+    phone: req.body.phone,
+    surl: 'http://localhost:8443/checkout',
+    furl: 'http://localhost:8443/checkout',
+    service_provider: 'payu_paisa'
+})
+})
+
+
 
 app.start = function (httpOnly) {
     //if (httpOnly === undefined) {
