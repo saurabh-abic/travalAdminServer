@@ -76,10 +76,10 @@ console.log(hash);
 
 res.json({
     hash: hash,
-    key: "OYL5tj9T",
-    salt: "XXCo8YibBv",
-    txnid: "4TYD21M7",
-    amount: 10,
+    key: key,
+    salt: salt,
+    txnid: txnid,
+    amount: amount,
     productinfo: req.body.productinfo,
     firstname: req.body.firstname,
     email: req.body.email,
